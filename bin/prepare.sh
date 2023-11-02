@@ -113,7 +113,7 @@ then
     cd $DIR
     ./runonce.sh "./init.sh -c ${CLOUD_NAME} -a ${ARCH}"
     sleep 5s
-    sudo shutdown -r +1
+    sudo reboot
 else
     echo "First stage done. Please reboot and run init.sh -c ${CLOUD_NAME} -a ${ARCH}"
 fi

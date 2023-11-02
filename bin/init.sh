@@ -148,7 +148,10 @@ sed -i "s/<COACH_TAG>/$COACH_VERSION/g" $INSTALL_DIR/system.env
 
 ROBOMAKER_VERSION=$(jq -r '.containers.robomaker  | select (.!=null)' $INSTALL_DIR/defaults/dependencies.json)
 if [ -n $ROBOMAKER_VERSION ]; then
-    ROBOMAKER_VERSION=$ROBOMAKER_VERSION-$CPU_LEVEL
+
+    #ROBOMAKER_VERSION=$ROBOMAKER_VERSION-$CPU_LEVEL
+
+    ROBOMAKER_VERSION=$ROBOMAKER_VERSION-gpu
 else   
     ROBOMAKER_VERSION=$CPU_LEVEL
 fi
