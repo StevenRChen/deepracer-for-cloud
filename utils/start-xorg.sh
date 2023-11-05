@@ -1,7 +1,4 @@
 #!/bin/bash
-export DR_DISPLAY=:2
-export DR_DIR=/home/steven/deepracer/deepracer-for-cloud
-export DR_GUI_ENABLE=False
 export DISPLAY=$DR_DISPLAY
 
 nohup sudo xinit /usr/bin/jwm -- /usr/lib/xorg/Xorg $DISPLAY -config $DR_DIR/tmp/xorg.conf > $DR_DIR/tmp/xorg.log 2>&1 &
