@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Script to install basic X-Windows on a headless instance (e.g. in EC2)
+export DR_DIR=/home/steven/deepracer/deepracer-for-cloud
 
 # Install additional packages
 sudo apt-get install xinit xserver-xorg-legacy x11-xserver-utils x11-utils \
